@@ -1,7 +1,7 @@
-import AddTodoCard from "./components/AddTodoCard";
+import TextInput from "./components/TextInput";
 
 const App = () => {
-  return <AddTodoCard />;
+  return <TextInput />;
 };
 
 export default App;
