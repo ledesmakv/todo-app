@@ -5,8 +5,8 @@ const TextInput: FunctionComponent = () => {
   const [value, setValue] = useState<string>("");
 
   const handleChange = (e: FormEvent<HTMLInputElement>) => {
-    setValue(e.currentTarget.value);
-    console.log(e.currentTarget.value);
+    const { value } = e.currentTarget;
+    setValue(value);
   };
 
   return (
@@ -23,7 +23,11 @@ const Container = styled.div`
   padding: 40px;
   border-radius: 8px;
   width: 200px;
-  height: 50px;
+  height: 200px;
+  word-wrap: break-word;
+  box-shadow: 6px 5px 13px -1px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 6px 5px 13px -1px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 6px 5px 13px -1px rgba(0, 0, 0, 0.21);
 `;
 
 const Input = styled.input`
